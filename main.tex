@@ -60,7 +60,7 @@
 
 
 \chapter{基本概念} % 中文章节标题
-这本书摒弃了初等量子力学中按照历史发展顺序对量子力学一点一点介绍，而是从一个打破传统认知的实验开始。
+《现代量子力学（第二版）》这本书摒弃了初等量子力学中按照历史发展顺序对量子力学一点一点介绍，而是从一个打破传统认知的实验开始。
 \section{斯特恩-盖拉赫实验}
 斯特恩-盖拉赫实验的前提认知是银原子中一个电子（$5s$）的自旋（内禀的）提供了整个原子的磁矩，于是整个原子的磁矩满足，
 \begin{equation}
@@ -84,7 +84,8 @@
 \end{figure} 
 实验的结果是如图 ~\ref{fig:1.1} 所示的两个点状图样。这就是空间量子化的宏观表现。然后我们设计进一步的实验，
 \subsection{序列斯特恩-盖拉赫实验}
-这一部分暂时不写，懒~（周一补齐）
+这一部分暂时不写，懒~
+
 \section{右矢、左矢和算符}
 狄拉克发明的右矢（Ket）和左矢（Bra）符号体系，为量子力学的计算提供了简洁的数学框架。 
 \subsection{右矢空间}
@@ -94,9 +95,34 @@
 随着实验和理论的推进，人们才意识到，量子是以概率幅存在的，那么就无法用一个数值去对其进行描述了。
 那我们怎么描述，很简单，我们就用一个盒子把不同位置的概率幅装起来，然后有人问的时候，我们就把这个盒子打开给他看。
 除了装位置的盒子，我们还有装动量的盒子，装能量的盒子，装自旋的盒子等等，然后我们把所有的盒子都放在一个大的盒子里。
-这样就能完备的描述一个量子系统。这个盒子就是狄拉克定义的一个右矢。
+这样就能完备的描述一个量子系统。这个盒子就是狄拉克定义的一个右矢$|\psi\rangle$。其中由于需要满足归一化的要求，
+所以 $|\alpha\rangle$ 和 $c|\alpha\rangle$ （c为任意非零复数）描述的是同一个量子态。
+
+\subsection{左矢空间和内积}
+左矢空间和右矢空间相互对偶，且一一映射，用 $\langle \alpha |$ 表示，左矢空间由本征左矢张成，与右矢空间的一一对应关系写为
+\begin{equation}
+    \langle \alpha| \overset{DC}{\longleftrightarrow } |\alpha\rangle
+    \label{eq:1.4} 
+\end{equation}
+其中， $DC$ 代表对偶映射（Dual Correspondence）。
+左矢和右矢之间可以定义内积 $\langle \beta | \alpha \rangle$，其结果为一个复数，且与 $\langle \alpha | \beta \rangle$ 互为复共轭。记为：
+\begin{equation}
+    \langle \beta | \alpha \rangle = \langle \alpha | \beta \rangle^*
+    \label{eq:1.5} 
+\end{equation}
+
+\subsection{算符}
+一个算符代表了一种观测，可以将一个右矢映射到另一个右矢上，也许这个新的右矢的盒子中装的东西是不同的。当盒子里的东西保持不变时。
+我们把这个盒子叫做这个算符的本征右矢，又叫本征态。例如，自旋的例子：
+\begin{equation}
+    \hat{S}_z |\hat{S}_z; +\rangle = \frac{\hbar}{2} |\hat{S}_z; +\rangle, 
+    \hat{S}_z |\hat{S}_z; -\rangle = -\frac{\hbar}{2} |\hat{S}_z; -\rangle
+    \label{eq:1.3}
+\end{equation}
+
+现在我们考虑
 % \\
-% \\
+% \\下面是AI生成的内容，我注释掉了，后面可能会参考然后做修改
 % 量子力学中，系统的量子态由希尔伯特空间（Hilbert Space）中的右矢（记为 $|\psi\rangle$）描述。希尔伯特空间是一个完备的内积线性空间，其元素（右矢）是“概率幅”的集合——这与经典物理中用确定数值描述物理量的方式截然不同。  
 
 % 在经典世界中，粒子的位置是确定的（例如“在A点”或“在B点”）；但在量子世界中，粒子的状态是叠加态（Superposition）。例如，一个粒子的位置态可表示为：  
@@ -109,7 +135,13 @@
 
 % 左矢（记为 $\langle \phi |$）是右矢空间的对偶空间元素，用于定义内积运算。内积 $\langle \phi | \psi \rangle$ 是一个复数，其模平方 $|\langle \phi | \psi \rangle|^2$ 表示“在态 $|\phi\rangle$ 中测量到态 $|\psi\rangle$ 的概率”。在位置表象下，左矢 $\langle \mathbf{r} |$ 与右矢 $|\psi\rangle$ 的内积即为波函数 $\psi(\mathbf{r})$，这是连接抽象右矢与具体物理测量的关键桥梁。
 
-\subsubsection{希尔伯特空间}
+
+\subsubsection{定义及运算法则}
+可行的运算
+\begin{itemize}
+    \item c $|\alpha \rangle = |\alpha \rangle c$，c为复数
+    \item $|\alpha \rangle + |\beta\rangle$
+\end{itemize}
 
 
 
